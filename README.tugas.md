@@ -1,7 +1,10 @@
 # Tugas 2 PBP 
 Oleh:
+
 Ramya Nareswari Wikantiyoso
+
 2106751606
+
 PBP A
 
 ## Bagan Aplikasi Django
