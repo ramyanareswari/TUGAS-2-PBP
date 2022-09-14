@@ -28,8 +28,23 @@ urlpatterns = [
     path('katalog/', include('katalog.urls')),
 ]
 ``` 
-
-Daftar katalog ditampilkan ke dalam tabel dengan melakukan iterasi terhadap `list_data`
+5. Daftar katalog ditampilkan dengan melakukan iterasi terhadap `list_data` dengan menambahkan *snippet* berikut pada `katalog.html`
+```
+  ...
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for item in catalog_data %}
+      <tr>
+        <th>{{item.item_name}}</th>
+        <th>{{item.item_price}}</th>
+        <th>{{item.item_stock}}</th>
+        <th>{{item.description}}</th>
+        <th>{{item.rating}}</th>
+        <th>{{item.item_url}}</th>
+      </tr>
+    {% endfor %}
+  </table>
+  ...
+```
 
 
 
