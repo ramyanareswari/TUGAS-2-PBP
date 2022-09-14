@@ -1,11 +1,10 @@
 # Tugas 2: Pengenalan Aplikasi Django dan Models View Template (MVT) pada Django
 
-## Ramya Nareswari Wikantiyoso
-
-## 2106751606
+## Ramya Nareswari Wikantiyoso (2106751606)
 
 
 ## Link Aplikasi
+https://tugaspbp.herokuapp.com/katalog/
 
 ## Bagan Aplikasi Django
 
@@ -22,7 +21,13 @@ Jadi, sangat direkomendasikan untuk menggunakan *virtual environment* yang dapat
 1. Melakukan perintah `git clone` untuk menyalin repositori tugas PBP
 2. Menyalakan virtual env dan meng-*install* *dependencies*
 3. Pada `views.py`, saya menambahkan sebuah fungsi `show_catalog` yang menerima parameter `request` dan mengembalikan merender katalog.html dengan method `render()`. Fungsi menyimpan data yang diambil dari models.py ke dalam dictionary `context`.
-
+4. Pada `urls.py`, function `show_catalog` didefinisikan di dalam urlpatterns dengan menambahkan *snippet* sebagai berikut
+```
+urlpatterns = [
+    ...
+    path('katalog/', include('katalog.urls')),
+]
+``` 
 
 Daftar katalog ditampilkan ke dalam tabel dengan melakukan iterasi terhadap `list_data`
 
