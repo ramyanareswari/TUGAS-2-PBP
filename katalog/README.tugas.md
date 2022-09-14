@@ -8,6 +8,7 @@ https://tugaspbp.herokuapp.com/katalog/
 
 ## Bagan Aplikasi Django
 
+
 ## Kegunaan *Virtual Environment*
 *Virtual environment* tidak terbatas pada Django saja, tetapi juga berlaku untuk seluruh proyek Python.
 
@@ -45,7 +46,7 @@ urlpatterns = [
   </table>
   ...
 ```
-
-
+### Deployment
+6. Langkah terakhir adalah men-*deploy* aplikasi ke Heroku dengan menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secrets`
 
 
