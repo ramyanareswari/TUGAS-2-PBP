@@ -11,27 +11,24 @@
   <p>{{id}}</p>
 
   <table>
-    <tr>
-      <th>Item Name</th>
-      <th>Item Price</th>
-      <th>Item Stock</th>
-      <th>Rating</th>
-      <th>Description</th>
-      <th>Item URL</th>
-    </tr>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Item Stock</th>
+        <th>Rating</th>
+        <th>Description</th>
+        <th>Item URL</th>
+      </tr>
     {% comment %} Add the data below this line {% endcomment %}
-
     {% for item in catalog_data %}
-    <tr>
-      <th>item.item_name</th>
-      <th>item.item_price</th>
-      <th>item.item_stock</th>
-      <th>item.description</th>
-      <th>item.rating</th>
-      <th>item.url</th>
-    </tr>>
+      <tr>
+        <th>{{item.item_name}}</th>
+        <th>{{item.item_price}}</th>
+        <th>{{item.item_stock}}</th>
+        <th>{{item.description}}</th>
+        <th>{{item.rating}}</th>
+        <th>{{item.item_url}}</th>
+      </tr>
     {% endfor %}
-    
   </table>
-
  {% endblock content %}
