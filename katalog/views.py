@@ -1,12 +1,11 @@
-from gettext import Catalog
 from django.shortcuts import render
 from katalog.models import CatalogItem
 
 def show_catalog(request):
-    catalog_data = CatalogItem.objects.all()
+    catalog_item = CatalogItem.objects.all()
     
     context = {
-        'list_data': catalog_data,
+        'catalog_data': catalog_item,
         'name':  'RAMYA NARESWARI',
         'id': '2106751606'
     }
