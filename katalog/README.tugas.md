@@ -7,7 +7,7 @@
 https://tugaspbp.herokuapp.com/katalog/
 
 ## Bagan Aplikasi Django
-
+![Bagan](D:\dev\Ramya\PBP\TUGAS-2-PBP\bagan.png)
 
 ## Kegunaan *Virtual Environment*
 *Virtual environment* tidak terbatas pada Django saja, tetapi juga berlaku untuk seluruh proyek Python.
