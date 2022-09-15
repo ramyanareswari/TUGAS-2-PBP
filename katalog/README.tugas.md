@@ -9,6 +9,10 @@ https://tugaspbp.herokuapp.com/katalog/
 ## Bagan Aplikasi Django
 ![Bagan](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/bagan.png)
 
+### Penjelasan
+1. Client (user) mengirimkan request ke server, yaitu Django, melalui `urls.py`
+2. Request diterima, lalu `views.py` akan query ke Database melalui `models.py`
+3. Template HTML lalu dirender dan response dikirim pada client dalam bentuk tampilan website
 
 ## Kegunaan *Virtual Environment*
 *Virtual environment* tidak terbatas pada Django saja, tetapi juga berlaku untuk seluruh proyek Python.
@@ -22,7 +26,7 @@ Jadi, sangat direkomendasikan untuk menggunakan *virtual environment* yang dapat
 ## Implementasi Kode
 1. Melakukan perintah `git clone` untuk menyalin repositori tugas PBP
 2. Menyalakan virtual env dan meng-*install* *dependencies*
-3. Pada `views.py`, saya menambahkan sebuah fungsi `show_catalog` yang menerima parameter `request` dan mengembalikan merender katalog.html dengan method `render()`. Fungsi menyimpan data yang diambil dari models.py ke dalam dictionary `context`.
+3. Pada `views.py`, saya menambahkan sebuah fungsi `show_catalog` yang menerima parameter `request` dan mengembalikan merender katalog.html dengan method `render()`. Fungsi menyimpan data yang diambil dari models.py ke dalam variable `context` yang bertipe dictionary. Variable tersebut akan menyimpan hasil query dari seluruh data pada `CatalogItem`
 4. Pada `urls.py`, function `show_catalog` didefinisikan di dalam urlpatterns dengan menambahkan *snippet* sebagai berikut
 ```
 urlpatterns = [
