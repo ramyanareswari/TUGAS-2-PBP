@@ -14,6 +14,7 @@ https://tugaspbp.herokuapp.com/katalog/
 2. Request diterima, lalu `views.py` akan query ke Database melalui `models.py`
 3. Template HTML lalu dirender dan response dikirim pada client dalam bentuk tampilan website
 
+
 ## Kegunaan *Virtual Environment*
 *Virtual environment* tidak terbatas pada Django saja, tetapi juga berlaku untuk seluruh proyek Python.
 
