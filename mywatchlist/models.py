@@ -9,3 +9,5 @@ class WatchListItem(models.Model):
     rating = models.IntegerField()
     release_date = models.DateField()
     review = models.TextField()
+
+    
