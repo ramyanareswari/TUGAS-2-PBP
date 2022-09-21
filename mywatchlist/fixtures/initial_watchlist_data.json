@@ -4,10 +4,10 @@
         "pk": 1,
         "fields": {
             "watched": true,            
-            "title": "Original from iBox",
-            "rating": 5,
+            "title": "Interstellar",
+            "rating": 8.6,
             "release_date": "2014-11-6",
-            "review": "no"
+            "review": "A bold, beautiful cosmic adventure story with a touch of the surreal and the dreamlike."
         }
     },
     {
@@ -15,21 +15,21 @@
         "pk": 2,
         "fields": {
             "watched": false,            
-            "title": "Bandai Original Ver.Ka Series",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Spencer",
+            "rating": 6.6,
+            "release_date": "2021-11-5",
+            "review": "The movie is a bit much to take. It's oppressive, which fits the subject matter, so I get that. But it's also very one note, and worst, it doesn't make Princess Diana come alive as a person or character."
         }
     },
     {
         "model": "mywatchlist.WatchListItem",
         "pk": 3,
         "fields": {
-            "watched": true,
-            "title": "Specification: Snapdragon 8",
-            "rating": 5,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "watched": false,
+            "title": "Elizabeth",
+            "rating": 5.9,
+            "release_date": "2022-05-23",
+            "review": "Creative, respectful, enjoyable and touching. Well done."
         }
     },
     {
@@ -37,10 +37,10 @@
         "pk": 4,
         "fields": {
             "watched": true,
-            "title": "Nike Original Made In China",
-            "rating": 5,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "The Boy in Striped Pyjamas",
+            "rating": 7.7,
+            "release_date": "2008-08-25",
+            "review": "This movie is not as much about the Holocaust but about human emotions, about the innocence of children, why the grace and good nature of women is taking care of this world, the monster in every men and how life can be a Frankenstein."
         }
     },
     {
@@ -48,10 +48,10 @@
         "pk": 5,
         "fields": {
             "watched": true,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Dunkirk",
+            "rating": 7.8,
+            "release_date": "2017-07-20",
+            "review": "Christopher Nolan's largely bloodless but profoundly harrowing war epic is the best film he's ever made. Masterful visual storytelling on an epic scale"
         }
     },
     {
@@ -59,10 +59,10 @@
         "pk": 6,
         "fields": {
             "watched": true,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Inception",
+            "rating": 8.8,
+            "release_date": "2010-07-16",
+            "review": "Inception is such a mind‑blowing, storytelling masterpiece and Christopher Nolan's 1# film while also being one of the greatest science fiction action movies ever made"
         }
     },
     {
@@ -70,21 +70,21 @@
         "pk": 7,
         "fields": {
             "watched": false,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Train to Busan",
+            "rating": 7.6,
+            "release_date": "2016-07-20",
+            "review": "It’s a great action flick, it’s paced well so it has your attention drawn throughout and the end is somewhat emotional."
         }
     },
     {
         "model": "mywatchlist.WatchListItem",
         "pk": 8,
         "fields": {
-            "watched": true,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "watched": false,
+            "title": "Munich - The Edge of War",
+            "rating": 6.8,
+            "release_date": "2021-01-22",
+            "review": "World War 2 films have always intrigued viewers, especially younger ones as they look to experience how such a global conflict impacted the lives of people during that time. “Munich-The Edge of War” may not appeal to everyone, especially viewers looking for spectacle and action as normally is the case with World War 2 films. Instead, this belongs to the lexicon of more restrained, realistic and psychological war dramas like “Oslo” (2021) and “The Imitation Game” (2014) where the impact of the war on the protagonists is depicted in fine detail rather than the event itself."
         }
     },
     {
@@ -92,10 +92,10 @@
         "pk": 9,
         "fields": {
             "watched": false,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Valkyrie",
+            "rating": 7.1,
+            "release_date": "2008-12-25",
+            "review": "Definitely in my top 10, not overly actiony, the plot is very close to what happen and all the plot points are fleshed out. As a history buff it's a good movie that's not overly historical and still has it's good tense scenes. Shows Nazi Germany as it mostly was, not all germans supported the war crimes and crimes against humanity,  alot of regular germans actual wasn't to aware of that part and this movie shows one of the plots to overthrow the axis of evil."
         }
     },
     {
@@ -103,10 +103,10 @@
         "pk": 10,
         "fields": {
             "watched": true,
-            "title": "Authorized Reseller",
-            "rating": 4,
-            "release_date": "2014-11-6",
-            "review": "no"
+            "title": "Anastasia",
+            "rating": 7.1,
+            "release_date": "1998-06-20",
+            "review": "I love the movie because it was based on the true story about the great Anatasia of Romanov royal family during the Russian Revolution."
         }
     }
 ]
