@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 1,
+        "fields": {
+            "watched": true,            
+            "title": "Original from iBox",
+            "rating": 5,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 2,
+        "fields": {
+            "watched": false,            
+            "title": "Bandai Original Ver.Ka Series",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 3,
+        "fields": {
+            "watched": true,
+            "title": "Specification: Snapdragon 8",
+            "rating": 5,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 4,
+        "fields": {
+            "watched": true,
+            "title": "Nike Original Made In China",
+            "rating": 5,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 5,
+        "fields": {
+            "watched": true,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 6,
+        "fields": {
+            "watched": true,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 7,
+        "fields": {
+            "watched": false,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 8,
+        "fields": {
+            "watched": true,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 9,
+        "fields": {
+            "watched": false,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title": "Authorized Reseller",
+            "rating": 4,
+            "release_date": "2014-11-6",
+            "review": "no"
+        }
+    }
+]
