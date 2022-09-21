@@ -1,13 +1,13 @@
 from pyexpat import model
 from turtle import title
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 class WatchListItem(models.Model):
-    watched = models.BooleanField()
-    title = models.TextField()
-    rating = models.IntegerField()
+    watched = models.BooleanField(default=True)
+    title = models.TextField(default='')
+    rating = models.FloatField(default=0)
     release_date = models.DateField()
-    review = models.TextField()
+    review = models.TextField(default='')
 
-    
