@@ -2,40 +2,40 @@
 
 ## Ramya Nareswari Wikantiyoso (2106751606)
 
+## New Repository Link
+https://github.com/ramyanareswari/DUMMY-TUGAS-PBP
 
 ## Link Aplikasi
+https://assignmentpbp.herokuapp.com/mywatchlist/
+https://assignmentpbp.herokuapp.com/mywatchlist/html/
 
 ## Jawaban Pertanyaan ✅
 
 ### 1. Jelaskan perbedaan antara JSON, XML, dan HTML!
-JSON merupakan singkatan dari JavaScript Object Notation. Oleh karena itu, syntax JSON sebenarnya merupakan turunan dari bahasa pemrograman JavaScript. Data-data yang disimpan pada file dengan format JSON memiliki type. Sehingga kita tidak dapat mendefinisikan type baru untuk suatu object seperti pada file XML. Jika kita lihat dari hasil percobaan lab 2 kali ini, data yang ada di file JSON hanya merupakan list of strings dari apa yang di-input oleh user.
-Sedangkan pada file XML, data yang ditampilkan lebih kelihatan bentuknya dan lebih terstruktur. Dan jika kita perhatikan, tampilan XML lebih mirip dengan tampilan code file html. Karena mengandung <> dan </>.
+JSON (JavaScript Object Notation) merupakan turunan dari bahasa pemrograman JavaScript. Data yang ada di file JSON hanya merupakan list of strings dari apa yang di-input oleh user. Data tersebut tidak memiliki tag yang didefinisikan secara langsung.
 
-XML sendiri merupakan singkatan dari eXtensible Markup Language. Namun, berbeda dengan JSON, XML tidak menggunakan bahasa pemrograman tertentu. XML dapat dibaca oleh manusia maupun mesin. Hal tersebut yang membuat XML terkenal dengan simplicity, generality, dan usability-nya. Dan jika kita lihat pada hasil percobaan lab 2 (/lab-2/xml), XML hanya menyimpan kumpulan informasi atau data yang dibungkus dengan tag yang tidak pre-defined. Dengan demikian, seorang programmer dapat mendefinisikan tag-nya sendiri.
+XML (eXtensible Markup Language) tidak menggunakan bahasa pemrograman tertentu. XML dapat dibaca dengan musah oleh manusia maupun mesin  karena strukturnya. XML  menyimpan data yang dibungkus dengan tag yang tidak pre-defined, dan tag tersebut dapat didefinisikan secara manual.
 
-HTML merupakan singkatan dari Hypertext Markup Languange. Sedangkan XML merupakan singkatan dari eXtensible Markup Languange. Namun, perbedaan yang sangat jelas diantara keduanya adalah dari segi fungsi penggunaannya. HTML berfokus untuk menampilkan data. Sedangkan XML berfokus untuk menyimpan dan mengangkut data tersebut. Maka dapat dikatakan bahwa HTML adalah format-driven dan XML adalah content-driven.
-Perbedaan lain antara HTML dan XML dapat dilihat dari segi tags yang tersedia pada masing-masing markup language. Sesuai namanya, eXtensible Markup Language, XML memiliki tags yang extensible. Sedangkan HTML memiliki tags yang terbatas. Karena terbatas, maka tags dari HTML sudah di-define secara automatis. Sedangkan tags XML tidaklah pre-defined. Sehingga kita dapat menuliskan tags baru sesuai dengan kebutuhan kita.
+HTML (Hypertext Markup Languange) berfokus untuk menampilkan data kepada user, berbeda dengan  XML yang menyimpan data tersebut. HTML biasa disebut format-driven. HTML memiliki tags yang terbatas, sehingga tags-tags yang ada didefinisikan secara otomatis.
 
 ### 2. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+Karena pada implementasi development sebuah platform, dibutuhkan banyak data untuk diambil, diubah, digabungkan, dan dikirimkan ke user.
 
 ### 3. Implementasi Kode
-1. `cd` ke direktori tempat `TUGAS-2-PBP` berada
+1. `cd` ke direktori tempat `dummy-tugas-pbp` berada
 2. Menyalakan virtual environment dengan perintah `python -m venv env`, lalu `env\Scripts\activate.bat` dan `pip install -r requirements.txt`
 2. Buat aplikasi bernama `mywatchlist` dengan perintah `python manage.py startapp mywatchlist`
 3. Melakukan konfigurasi pada `settings.py` di folder `project_django` dengan menambahkan aplikasi `mywatchlist` ke dalam variabel `INSTALLED_APPS`. Hal tersebut dilakukan untuk mendaftarkan aplikasi `mywatchlist` ke dalam proyek Django
+4. Menambahkan *code snippet* di bawah ke dalam file `models.py` pada folder `mywatchlist`
+5. Melakukan perintah `python manage.py makemigrations` untuk mempersiapkan migrasi skema model ke dalam database Django lokal.
+6. Melakukan perintah `python manage.py migrate` untuk menerapkan skema model yang telah dibuat ke dalam database Django lokal.
+7. Membuat folder `fixtures` di dalam folder aplikasi `mywatchlist`, lalu membuat berkas `initial_watchlist_data.json` yang berisi data dari objek
+8. Lalu, untuk memasukkan data tersebut ke dalam database Django lokal, menggunakan perintah `python manage.py loaddata initial_watchlist_data.json`
+9. Menambahkan file `urls.py` pada folder `mywatchlist` untuk melakukan *routing* terhadap fungsi `views` agar halaman HTML dapat dilihat pada browser. Setelah itu, lakukan konfigurasi dengan menambahkan kode:
+10. Melakukan konfigurasi pada `urls.py` yang ada di folder `project_django` dan folder `mywatchlist`
+11. Langkah terakhir adalah men-*deploy* aplikasi ke Heroku dengan menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secrets`
 
-5. Menambahkan *code snippet* di bawah ke dalam file `models.py` pada folder `mywatchlist`
-
-6. Lakukan perintah `python manage.py makemigrations` untuk mempersiapkan migrasi skema model ke dalam database Django lokal.
-
-7. Jalankan perintah `python manage.py migrate` untuk menerapkan skema model yang telah dibuat ke dalam database Django lokal.
-
-8. Membuat folder `fixtures` di dalam folder aplikasi `mywatchlist`, lalu membuat berkas `initial_watchlist_data.json` yang berisi:
-```
-
-```
-9. Lalu, untuk memasukkan data tersebut ke dalam database Django lokal, menggunakan perintah `python manage.py loaddata initial_watchlist_data.json`
-
-3. Menambahkan file `urls.py` pada folder `mywatchlist` untuk melakukan *routing* terhadap fungsi `views` agar halaman HTML dapat dilihat pada browser. Setelah itu, lakukan konfigurasi dengan menambahkan kode:
-
-4. Melakukan konfigurasi pada `urls.py` yang ada di folder `project_django` dan folder `mywatchlist`
+### Screenshot Postman
+![Postman1](https://github.com/ramyanareswari/dummy-tugas-pbp/blob/main/mywatchlist/screenshot/postman1.png)
+![Postman2](https://github.com/ramyanareswari/dummy-tugas-pbp/blob/main/mywatchlist/screenshot/postman2.png)
+![Postman3](https://github.com/ramyanareswari/dummy-tugas-pbp/blob/main/mywatchlist/screenshot/postman3.png)
