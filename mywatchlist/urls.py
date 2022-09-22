@@ -14,4 +14,4 @@ urlpatterns = [
     path('xml/<int:id>', show_xml_id, name='show_xml_id'),
     path('json/', show_json, name='show_json'),
     path('json/<int:id>', show_json_id, name='show_json_id'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 
