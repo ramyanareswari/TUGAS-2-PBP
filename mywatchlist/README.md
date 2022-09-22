@@ -37,11 +37,11 @@ Karena pada implementasi development sebuah platform, dibutuhkan banyak data unt
 10. Melakukan konfigurasi pada `urls.py` yang ada di folder `project_django` dan folder `mywatchlist`
 11. Untuk mengembalikan data dalam bentuk XML: buat fungsi yang mereturn function berupa `HttpResponse` yang berisi parameter data hasil query yang sudah diserialisasi menjadi XML dan ``parameter content_type="application/xml"`` -> lalu tambahkan path url ke dalam urlpatterns untuk mengakses fungsi yang sudah diimpor tadi dengan menambahkan code berikut pada `urls.py`:
 ```
-path('xml/', show_xml, name=’show_xml’), #sesuaikan dengan nama fungsi yang dibuat
+path('xml/', show_xml, name=’show_xml’),
 ```
 12. Untuk mengembalikan data dalam bentuk JSON: buat fungsi yang mereturn function berupa `HttpResponse` yang berisi parameter data hasil query yang sudah diserialisasi menjadi XML dan ``parameter content_type="application/json"`` -> lalu tambahkan path url ke dalam urlpatterns untuk mengakses fungsi yang sudah diimpor tadi dengan menambahkan code berikut pada `urls.py`:
 ```
-path('json/', show_json, name=’show_json’), #sesuaikan dengan nama fungsi yang dibuat
+path('json/', show_json, name=’show_json’), 
 ```
 13. Langkah terakhir adalah men-*deploy* aplikasi ke Heroku dengan menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secrets`
 
