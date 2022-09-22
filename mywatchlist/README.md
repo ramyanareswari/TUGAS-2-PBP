@@ -3,10 +3,10 @@
 ## Ramya Nareswari Wikantiyoso (2106751606)
 
 
-## New Repository Link
+## New Repository Link 🔗
 https://github.com/ramyanareswari/DUMMY-TUGAS-PBP
 
-## Link Aplikasi
+## Link Aplikasi 🔗
 https://assignmentpbp.herokuapp.com/mywatchlist/
 https://assignmentpbp.herokuapp.com/mywatchlist/html/
 
@@ -34,7 +34,15 @@ Karena pada implementasi development sebuah platform, dibutuhkan banyak data unt
 8. Lalu, untuk memasukkan data tersebut ke dalam database Django lokal, menggunakan perintah `python manage.py loaddata initial_watchlist_data.json`
 9. Menambahkan file `urls.py` pada folder `mywatchlist` untuk melakukan *routing* terhadap fungsi `views` agar halaman HTML dapat dilihat pada browser. Setelah itu, lakukan konfigurasi dengan menambahkan kode:
 10. Melakukan konfigurasi pada `urls.py` yang ada di folder `project_django` dan folder `mywatchlist`
-11. Langkah terakhir adalah men-*deploy* aplikasi ke Heroku dengan menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secrets`
+11. Untuk mengembalikan data dalam bentuk XML: buat fungsi yang mereturn function berupa `HttpResponse` yang berisi parameter data hasil query yang sudah diserialisasi menjadi XML dan ``parameter content_type="application/xml"`` -> lalu tambahkan path url ke dalam urlpatterns untuk mengakses fungsi yang sudah diimpor tadi dengan menambahkan code berikut pada `urls.py`:
+```
+path('xml/', show_xml, name=’show_xml’), #sesuaikan dengan nama fungsi yang dibuat
+```
+12. Untuk mengembalikan data dalam bentuk JSON: buat fungsi yang mereturn function berupa `HttpResponse` yang berisi parameter data hasil query yang sudah diserialisasi menjadi XML dan ``parameter content_type="application/json"`` -> lalu tambahkan path url ke dalam urlpatterns untuk mengakses fungsi yang sudah diimpor tadi dengan menambahkan code berikut pada `urls.py`:
+```
+path('json/', show_json, name=’show_json’), #sesuaikan dengan nama fungsi yang dibuat
+```
+13. Langkah terakhir adalah men-*deploy* aplikasi ke Heroku dengan menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secrets`
 
 ### Screenshot Postman
 ![Postman1](https://github.com/ramyanareswari/dummy-tugas-pbp/blob/main/mywatchlist/screenshot/postman1.png)
