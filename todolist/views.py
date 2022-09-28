@@ -20,18 +20,18 @@ def show_todolist(request):
 
 @login_required(login_url='/todolist/login/')
 def create_task(request):
-    form = CreateNew(request.POST)
+    task_form = CreateNew(request.POST)
     if request.method == 'POST':
         
-            form = CreateNew(request.POST)
-            if form.is_valid():
-                new = form.save(commit=False)
+            task_form = CreateNew(request.POST)
+            if task_form.is_valid():
+                new = task_form.save(commit=False)
                 new.user = request.user
                 new.save()
 
                 return redirect("todolist:show_todolist")
 
-    context = {'form' : form}
+    context = {'task_form' : task_form}
     return render(request, 'create_task.html', context)
 
 def register(request):
