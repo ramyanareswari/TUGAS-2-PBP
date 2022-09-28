@@ -1,3 +1,4 @@
+from urllib import response
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import redirect, render
@@ -25,16 +26,18 @@ def show_todolist(request):
 
 @login_required(login_url='/todolist/login/')
 def create_task(request):
+    # Memanggil CreateNew dari forms.py
     task_form = CreateNew(request.POST)
     if request.method == 'POST':
         
             task_form = CreateNew(request.POST)
             if task_form.is_valid():
                 new = task_form.save(commit=False)
-                new.user = request.user
+                task_form.instance.user = request.user
                 new.save()
 
-                return redirect("todolist:show_todolist")
+                response=HttpResponseRedirect(reverse("todolist:show_todolist"))
+                return response
 
     context = {'task_form' : task_form}
     return render(request, 'create_task.html', context)
@@ -71,14 +74,3 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
-
-def delete_task(request, id):
-    task = Task.objects.get(id=id)
-    task.delete()
-    return redirect("todolist:show_todolist")
-    
-def change_status(request, id):
-    task = Task.objects.get(id=id)
-    task.is_finished = not task.is_finished
-    task.save()
-    return redirect("todolist:show_todolist")

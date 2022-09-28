@@ -16,7 +16,7 @@
 
   <table>
     <thead>
-      <tr 2px 2px #ababab;>
+      <tr>
         <th>Title</th>  
         <th>Description</th>
         <th>Date Created</th>
@@ -28,13 +28,9 @@
     <tbody>
       {% for task in task_data %}
       <tr>
+        <th>{{task.date}}</th>
         <th>{{task.title}}</th>
         <th>{{task.description}}</th>
-        <th>{{task.date}}</th>
-
-        <td>
-          <button><a href="{% url 'todolist:change-status' task.id %}">Change Task's Status</a></button>
-        </td>
 
         <th>
           {% if task.is_finished %}
@@ -44,10 +40,6 @@
           {% endif %}
         </th>
         
-        <td>
-          <button><a href="{% url 'todolist:delete-task' task.id %}">Delete Task</a></button>
-        </td>
-
       </tr>
       {% endfor %}
     </tbody>

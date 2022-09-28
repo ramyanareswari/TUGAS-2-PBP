@@ -12,8 +12,10 @@
     <form method="POST" action="">
         {% csrf_token %}
         <table>
-            {{ form }}
+            {{ task_form.as_table }}
+            <tr>
                 <td><input type="submit" value="Add Task"></td>
+            </tr>
         </table>
     </form>   
 
