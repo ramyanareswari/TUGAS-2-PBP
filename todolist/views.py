@@ -10,8 +10,13 @@ from todolist.models import Task
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    task_data = Task.objects.filter(user=request.user)
+    task_list = Task.objects.all()
+    task_data=[]
+    user = request.user
 
+    for task in task_list:
+        if task.user == user:
+            task_data.append(task)
     context = {
         'task_data':task_data,
         'name' : request.user,
