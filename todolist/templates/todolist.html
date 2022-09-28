@@ -21,6 +21,7 @@
         <th>Title</th>  
         <th>Description</th>
         <th>Status</th>
+        <th>Change Task Status</th>
         <th>Delete Task</th>
       </tr>
     </thead>
@@ -33,12 +34,20 @@
         <th>{{task.description}}</th>
 
         <th>
-          {% if task.is_finished %}
+          {% if task.is_finished == False %}
           Belum Selesai
           {% else %}
           Selesai
           {% endif %}
         </th>
+        
+        <td>
+          <button><a href="{% url 'todolist:update-task' task.id %}">Update Task Status</a></button>
+       </td>
+
+        <td>
+          <button><a href="{% url 'todolist:delete-task' task.id %}">Delete Task</a></button>
+       </td>
         
       </tr>
       {% endfor %}

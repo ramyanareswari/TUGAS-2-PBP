@@ -33,6 +33,7 @@ def create_task(request):
             task_form = CreateNew(request.POST)
             if task_form.is_valid():
                 new = task_form.save(commit=False)
+                # Set the current logged in user
                 task_form.instance.user = request.user
                 new.save()
 
@@ -74,3 +75,14 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+def delete_task(request, id):
+    task_delete= Task.objects.filter(pk=id)
+    task_delete.delete()
+    return redirect(reverse("todolist:show_todolist"))
+
+def update_task(request, id):
+    task_update= Task.objects.get(pk=id)
+    task_update.is_finished = not task_update.is_finished
+    task_update.save()
+    return redirect(reverse("todolist:show_todolist"))
