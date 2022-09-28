@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'todolist.css' %}">
+</head>
+
+<body>
+  <h1>
+  TUGAS 4 PBP
+  </h1>
+
+  <h2>Halo, {{name}}!</h2>
+
+  <table>
+    <thead>
+      <tr 2px 2px #ababab;>
+        <th>Date Created</th>
+        <th>Title</th>  
+        <th>Description</th>
+        <th>Status</th>
+        <th>Delete Task</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for task in todolist_user %}
+      <tr>
+        <th>{{task.date}}</th>
+        <th>{{task.title}}</th>
+        <th>{{task.description}}</th>
+        <th>
+          {% if task.is_finished %}
+          Selesai
+          {% else %}
+          Belum Selesai
+          {% endif %}
+        </th>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+  <button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
+  
+  {% endblock content %}
+</body>
