@@ -26,7 +26,7 @@
     </thead>
 
     <tbody>
-      {% for task in todolist_user %}
+      {% for task in task_data %}
       <tr>
         <th>{{task.title}}</th>
         <th>{{task.description}}</th>
@@ -38,9 +38,9 @@
 
         <th>
           {% if task.is_finished %}
-          Selesai
-          {% else %}
           Belum Selesai
+          {% else %}
+          Selesai
           {% endif %}
         </th>
         
