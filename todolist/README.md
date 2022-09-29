@@ -36,7 +36,13 @@ Bisa. Caranya yaitu:
 
 
 ### Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML `form`, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
+1. Browser akan mengirimkan request data ketika user selesai mengisi form dengan metode POST. 
+2. Hasil request data akan diterima oleh server (urls.py) dan data di dalam database akan berubah
+3. Server akan mengecek validitas request yang dikirimkan
+4. `urls.py` akan menelusuri `views.py` untuk mencari method yang tepat untuk handle request
+5. Server mengirim HTTP Response berupa file .html (user akan diarahkan ke page lain)
 
+![Bagan](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Form.png)
 
 Sumber: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms
 
@@ -108,9 +114,13 @@ Menambahkan `HEROKU_API_KEY` dan `HEROKU_APP_NAME` pada Github `Action -> Secret
 
 ### Membuat dua akun pengguna dan tiga dummy data menggunakan model Task pada akun masing-masing di situs web Heroku.
 Akun 1: luluspbp
+
 Password: aamiin12
-![Bagan](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun 1.png)
+
+![Bagan1](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun1.png)
 
 Akun 2: pengenlulus
+
 Password: lulussemuamatkulyu
-![Bagan](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun 2.png)
+
+![Bagan2](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun2.png)
