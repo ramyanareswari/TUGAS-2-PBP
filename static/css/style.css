@@ -3,3 +3,5 @@
 body {
   font-family: 'Rubik', sans-serif;
 }
+
+table, th, td {border: 1px solid black;}
