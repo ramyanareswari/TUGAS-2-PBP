@@ -124,3 +124,22 @@ Akun 2: pengenlulus
 Password: lulussemuamatkulyu
 
 ![Bagan2](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun2.png)
+
+# Tugas 4: Web Design dengan HTML, CSS, dan CSS Framework
+
+## Jawaban Pertanyaan ✅
+### Apa perbedaan Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan masing-masing style?
+1. Inline CSS digunakan untuk styling elemen HTML yang spesifik. Penerapan Inline CSS adalah dengan menambahkan atribut `style` ke setiap tag HTML  tanpa menggunakan selector.
+TODO: Kelebihan: efektif untuk styling website single-page
+Kekurangan: terlalu menghabiskan banyak waktu, sehingga kurang efektif untuk styling website dengan lebih dari satu page
+
+2. Internal CSS. Penerapan Internal CSS yaitu dengan menambahkan tag <style> pada section `<head>`.
+Kelebihan: efektif untuk styling website single-page
+Kekurangan: karena code untuk style ditambahkan ke file HTML, maka waktu loading page website akan bertambah
+
+3. External CSS adalah CSS file yang terpisah dari file HTML. File tersebut memiliki ekstensi `.css`. Penerapan External CSS yaitu menghubungkan file `.css` dengan file HTML, dengan cara menambahkan elemen `<link>` pada section `<head>`
+Kelebihan:
+a. Satu file `.css` dapat dihubungkan dengan beberapa file HTML
+b. File HTML akan lebih rapi serta loading page website akan lebih cepat
+Kekurangan:
+a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS external diload
