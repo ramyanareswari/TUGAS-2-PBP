@@ -5,5 +5,5 @@ body {
 }
 
 table, th, td {
-  border: 0.5rem solid black;
+  border: 0.5px solid rgb(120, 120, 120);
 }
