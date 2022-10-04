@@ -1,4 +1,4 @@
-# Tugas 3: Implementasi Form dan Autentikasi
+# Tugas 4: Implementasi Form dan Autentikasi
 
 ## Ramya Nareswari Wikantiyoso (2106751606)
 
@@ -125,10 +125,10 @@ Password: lulussemuamatkulyu
 
 ![Bagan2](https://github.com/ramyanareswari/TUGAS-2-PBP/blob/main/todolist/Akun2.png)
 
-# Tugas 4: Web Design dengan HTML, CSS, dan CSS Framework
+# Tugas 5: Web Design dengan HTML, CSS, dan CSS Framework
 
 ## Jawaban Pertanyaan ✅
-### Apa perbedaan Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan masing-masing style?
+### 1. Apa perbedaan Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan masing-masing style?
 1. Inline CSS digunakan untuk styling elemen HTML yang spesifik. Penerapan Inline CSS adalah dengan menambahkan atribut `style` ke setiap tag HTML  tanpa menggunakan selector.
 TODO: Kelebihan: efektif untuk styling website single-page
 Kekurangan: terlalu menghabiskan banyak waktu, sehingga kurang efektif untuk styling website dengan lebih dari satu page
@@ -143,3 +143,42 @@ a. Satu file `.css` dapat dihubungkan dengan beberapa file HTML
 b. File HTML akan lebih rapi serta loading page website akan lebih cepat
 Kekurangan:
 a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS external diload
+
+### 2. Jelaskan tag HTML5 yang kamu ketahui
+1. `<p>` dan `</p>`. Tag tersebut merupakan tag untuk membuat paragraph
+2. <title>. Tag tersebut berguna untuk menampilkan judul halaman website pada tab browser
+3. <a>. Tag tersebut adalah tag anchor, yang berfungsi sebagai hyperlink untuk mengarahkan pengguna ke tempat lain seperti URL di luar website
+4. 
+
+### 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui
+CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, kelas, attribute, dll.
+
+Contoh CSS selector:
+1. Element Selector
+2. Class Selector
+3. Id Selector
+
+## Implementasi Kode
+### 1. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
+Konfigurasi `base.html`
+
+With those few lines of code, you are ready to use Bootstrap and more importantly Bootstrap cards.
+
+Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan framework Bootstrap dengan cara menambahkan CDN Bootstrap pada elemen `<head>` dan elemen `<body>` pada `base.html`. Pada aplikasi `todolist` ini juga menggunakan external CSS, sehingga harus menambahkan lik
+1. Halaman login
+```html
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  {% block meta %}
+  {% endblock meta %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+</head>
+```
+
+### 2. Kustomisasi templat halaman `todolist` dengan card
+
+### 3. Membuat page maenjadi responsive
+Webpage Todolist ini memanfaatkan framework Bootstrap agar tampilan menjadi responsive. 
