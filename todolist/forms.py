@@ -12,11 +12,13 @@ class CreateNew(forms.ModelForm):
             'title': TextInput(attrs={
                 'class': "form-control",
                 'style': 'max-width: 300px;',
-                'placeholder': 'Insert task title..'
+                'placeholder': 'Insert task title..',
+                'required': 'False'
                 }),
             'description': TextInput(attrs={
                 'class': "form-control", 
                 'style': 'max-width: 300px;',
-                'placeholder': 'Insert task description..'
+                'placeholder': 'Insert task description..',
+                'required': 'False'
                 })
         }
