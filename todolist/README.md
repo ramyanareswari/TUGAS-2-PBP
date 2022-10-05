@@ -130,7 +130,7 @@ Password: lulussemuamatkulyu
 ## Jawaban Pertanyaan ✅
 ### 1. Apa perbedaan Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan masing-masing style?
 1. Inline CSS digunakan untuk styling elemen HTML yang spesifik. Penerapan Inline CSS adalah dengan menambahkan atribut `style` ke setiap tag HTML  tanpa menggunakan selector.
-TODO: Kelebihan: efektif untuk styling website single-page
+Kelebihan: efektif untuk styling website single-page
 Kekurangan: terlalu menghabiskan banyak waktu, sehingga kurang efektif untuk styling website dengan lebih dari satu page
 
 2. Internal CSS. Penerapan Internal CSS yaitu dengan menambahkan tag <style> pada section `<head>`.
@@ -148,24 +148,28 @@ a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS e
 1. `<p>` dan `</p>`. Tag tersebut merupakan tag untuk membuat paragraph
 2. <title>. Tag tersebut berguna untuk menampilkan judul halaman website pada tab browser
 3. <a>. Tag tersebut adalah tag anchor, yang berfungsi sebagai hyperlink untuk mengarahkan pengguna ke tempat lain seperti URL di luar website
-4. 
+4. <h1>, <h2>, <h3>, dst merupakan heading tags. Tag tersebut berfungsi untuk menampilkan heading dengan berbagai ukuran
+5. <br> tag berfungsi untuk membuat line break
+6. <html> tag berfungsi untuk membuat sebuah HTML document
+7. <div> tag berfungsi untuk mengelompokkan elemen atau tag menjadi suatu grup berisi blok konten. Tag ini juga berfungsi mendefinisikan class dan ID pada CSS sehingga blok konten ini nantinya dapat distyling menggunakan external CSS
+8.  <form> tag berfungsi untuk membuat sebuah form dari input pengguna
 
 ### 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui
 CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, kelas, attribute, dll.
 
 Contoh CSS selector:
 1. Element Selector
+
 2. Class Selector
+
 3. Id Selector
+
+4. Type Selector, berfungsi untuk me
 
 ## Implementasi Kode
 ### 1. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
-Konfigurasi `base.html`
-
-With those few lines of code, you are ready to use Bootstrap and more importantly Bootstrap cards.
-
-Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan framework Bootstrap dengan cara menambahkan CDN Bootstrap pada elemen `<head>` dan elemen `<body>` pada `base.html`. Pada aplikasi `todolist` ini juga menggunakan external CSS, sehingga harus menambahkan lik
-1. Halaman login
+1. Konfigurasi `base.html`
+Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan framework Bootstrap dengan cara menambahkan CDN Bootstrap pada elemen `<head>` dan elemen `<body>` pada `base.html`. Pada aplikasi `todolist` ini juga menggunakan external CSS, sehingga harus menambahkan link file CSS pada elemen `<head>`. Selain itu, ditambahkan juga link font external agar font default Bootstrap dapat tertimpa. Implementasinya adalah sebagai berikut:
 ```html
 <head>
   <meta charset="UTF-8">
@@ -177,6 +181,15 @@ Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan 
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
 </head>
 ```
+
+2. Membuat Navbar
+ 
+
+3. Halaman login
+Agar navbar dapat muncul pada halaman login, 
+
+4. Halaman registrasi
+
 
 ### 2. Kustomisasi templat halaman `todolist` dengan card
 
