@@ -3,7 +3,3 @@
 body {
   font-family: 'Rubik', sans-serif;
 }
-
-table, th, td {
-  border: 0.5px solid rgb(120, 120, 120);
-}
