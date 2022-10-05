@@ -227,7 +227,7 @@ Lalu di dalam file HTMl dibuat elemen yang memiliki ID name, contohnya sebagai b
 ```
 Maka, hasilnya adalah elemen `<p>` memiliki background kuning.
 
-5. *Pseudo Selector*, berfungsi untuk mengatur state pada sebuah elemen. Misalnya adalah ketika suatu card dihover, akan muncul efek sedikit ter-zoom pada card tersebut. Salah satu pseudo-class selector yang paling umum digunakan adalah `:hover` .
+5. *Pseudo Selector*, berfungsi untuk mengatur state pada sebuah elemen. Misalnya adalah ketika suatu card dihover, akan muncul efek sedikit ter-zoom pada card tersebut. Salah satu pseudo-class selector yang paling umum digunakan adalah `:hover`.
 
 ## Implementasi Kode
 ### 1. Konfigurasi `base.html`
@@ -245,17 +245,20 @@ Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan 
 ```
 
 ### 2. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
-1. Membuat Navbar
+- Membuat Navbar
 Pada app ini, navbar dibuat pada `header.html` dengan memanfaatkan Bootstrap5
 
-2. Halaman login, register.
+- Halaman login, register.
 Agar navbar dapat muncul di kedua halaman tersebut, harus ditambahkan `{% include 'header.html' %}` di dalam `{% block content %}`
 
-Styling kedua halaman tersebut tidak jauh berbeda karena sama-sama memanfaatkan `<form>`. Looping dilakukan di dalam container
+Styling kedua halaman tersebut tidak jauh berbeda karena sama-sama memanfaatkan `<form>`.
 
-### 2. Kustomisasi templat halaman `todolist` dan `create_task` dengan card.
-- Menambahkan `{% include 'header.html' %}`
-- 
+### 3. Kustomisasi templat halaman `todolist` dan `create_task`.
+- Menambahkan `{% include 'header.html' %}` agar navbar muncul
+
+- Pada `todolist.html`, *looping* dilakukan di dalam container, sehingga setiap data ditambahkan, akan muncul card di dalam container tersebut. Card dapat muncul dengan memanfaatkan `class card` dari bootstrap.
+
+- Form yang dibuat pada `forms.py` dimunculkan dengan menambahkan   `{{ task_form.as_p }}` pada `create_task.html`
 
 ### 3. Membuat page menjadi responsive
 Webpage Todolist ini memanfaatkan framework Bootstrap agar tampilan menjadi responsive. 
