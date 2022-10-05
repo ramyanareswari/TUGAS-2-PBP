@@ -159,7 +159,7 @@ a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS e
 CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, class, attribute, dll.
 
 Contoh CSS selector:
-1. Universal Selector berfungsi untuk memilih seluruh elemen pada scope tertentu. Contoh:
+1. *Universal Selector* berfungsi untuk memilih seluruh elemen pada scope tertentu. Contoh:
 ```css
 *{
     padding: 0;
@@ -168,7 +168,7 @@ Contoh CSS selector:
 ```
 Snippet code tersebut berfungsi untuk mereset padding dan margin bawaan browser, sehingga seluruh elemen HTML menjadi tidak memiliki padding dan margin.
 
-2. Class Selector berfungsi untuk memilih elemen berdasarkan nama class dari elemen tersebut. Sebuah elemen HTML bisa memiliki satu atau lebih class. Selector ini ditandai dengan tanda titik di depannya. Contoh:
+2. *Class Selector* berfungsi untuk memilih elemen berdasarkan nama class dari elemen tersebut. Sebuah elemen HTML bisa memiliki satu atau lebih class. Selector ini ditandai dengan tanda titik di depannya. Contoh:
 ```css
 .text-white {
     color: white;
@@ -188,7 +188,27 @@ Lalu di dalam file HTML dibuat elemen yang memiliki class text-white, contohnya:
 ```
 Hasilnya adalah elemen `<p>` di dalam class elemen `<div>` yang terdapat class text-white akan berubah menjadi warna putih, sedangkan `<h2>` tidak akan berubah warna
 
-3. Id Selector berfungsi untuk memilih elemen HTML berdasarkan nama ID. Selector ini mirip dengan selector class, tetapi hanya bisa diterapkan pada  satu elemen saja. Selector ini ditandai dengan tanda '#' di depannya
+3. *Type atau Tag Selector*, berfungsi untuk memilih atau memberi penanda pada elemen berdasarkan nama tag. Contohnya adalah:
+```css
+h1 {
+    color: blue;
+}
+```
+Lalu di dalam file HTMl dibuat suatu elemen
+```html
+<html>
+    ...
+    <div>
+        <h1>Greetings!</h1>
+        <h1>Welcome!</h1>
+        <p>My first name is Ramya.</p>
+    </div>
+    ...
+</html>
+```
+Maka hasilnya adalah seluruh elemen dengan tag `<h1>` warnanya akan berubah menjadi biru
+
+4. *Id Selector* berfungsi untuk memilih elemen HTML berdasarkan nama ID. Selector ini mirip dengan selector class, tetapi hanya bisa diterapkan pada  satu elemen saja. Selector ini ditandai dengan tanda '#' di depannya
 Contoh:
 ```css
 #name {
@@ -205,22 +225,12 @@ Lalu di dalam file HTMl dibuat elemen yang memiliki ID name, contohnya sebagai b
     ...
 </html>
 ```
-Maka, hasilnya adalah elemen `<p>` memiliki background kuning 
+Maka, hasilnya adalah elemen `<p>` memiliki background kuning.
 
-4. Type atau Tag Selector, berfungsi untuk memilih atau memberi penanda pada elemen berdasarkan nama tag. Contohnya adalah:
-```css
-
-
-```
-Lalu di dalam file HTMl dibuat elemen
-5. Pseudo Selector, berfungsi untuk mengatur state pada sebuah elemen. Misalnya adalah ketika suatu card dihover, akan muncul efek sedikit ter-zoom pada card tersebut. Contoh pseudo-class selector:
-
-
-
+5. *Pseudo Selector*, berfungsi untuk mengatur state pada sebuah elemen. Misalnya adalah ketika suatu card dihover, akan muncul efek sedikit ter-zoom pada card tersebut. Salah satu pseudo-class selector yang paling umum digunakan adalah `:hover` .
 
 ## Implementasi Kode
-### 1. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
-1. Konfigurasi `base.html`
+### 1. Konfigurasi `base.html`
 Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan framework Bootstrap dengan cara menambahkan CDN Bootstrap pada elemen `<head>` dan elemen `<body>` pada `base.html`. Pada aplikasi `todolist` ini juga menggunakan external CSS, sehingga harus menambahkan link file CSS pada elemen `<head>`. Selain itu, ditambahkan juga link font external agar font default Bootstrap dapat tertimpa. Implementasinya adalah sebagai berikut:
 ```html
 <head>
@@ -234,16 +244,21 @@ Sebelum bisa memanfaatkan Bootstrap, harus menghubungkan proyek yang dibuat dan 
 </head>
 ```
 
-2. Membuat Navbar
- 
+### 2. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
+1. Membuat Navbar
+Pada app ini, navbar dibuat pada `header.html` dengan memanfaatkan Bootstrap5
 
-3. Halaman login
-Agar navbar dapat muncul pada halaman login, 
+2. Halaman login, register.
+Agar navbar dapat muncul di kedua halaman tersebut, harus ditambahkan `{% include 'header.html' %}` di dalam `{% block content %}`
 
-4. Halaman registrasi
+Styling kedua halaman tersebut tidak jauh berbeda karena sama-sama memanfaatkan `<form>`. Looping dilakukan di dalam container
 
-
-### 2. Kustomisasi templat halaman `todolist` dengan card
+### 2. Kustomisasi templat halaman `todolist` dan `create_task` dengan card.
+- Menambahkan `{% include 'header.html' %}`
+- 
 
 ### 3. Membuat page menjadi responsive
 Webpage Todolist ini memanfaatkan framework Bootstrap agar tampilan menjadi responsive. 
+
+### Referensi
+https://www.w3schools.com/cssref/css_selectors.asp
