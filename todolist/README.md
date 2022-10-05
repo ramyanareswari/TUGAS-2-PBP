@@ -146,25 +146,77 @@ a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS e
 
 ### 2. Jelaskan tag HTML5 yang kamu ketahui
 1. `<p>` dan `</p>`. Tag tersebut merupakan tag untuk membuat paragraph
-2. <title>. Tag tersebut berguna untuk menampilkan judul halaman website pada tab browser
-3. <a>. Tag tersebut adalah tag anchor, yang berfungsi sebagai hyperlink untuk mengarahkan pengguna ke tempat lain seperti URL di luar website
-4. <h1>, <h2>, <h3>, dst merupakan heading tags. Tag tersebut berfungsi untuk menampilkan heading dengan berbagai ukuran
-5. <br> tag berfungsi untuk membuat line break
-6. <html> tag berfungsi untuk membuat sebuah HTML document
-7. <div> tag berfungsi untuk mengelompokkan elemen atau tag menjadi suatu grup berisi blok konten. Tag ini juga berfungsi mendefinisikan class dan ID pada CSS sehingga blok konten ini nantinya dapat distyling menggunakan external CSS
-8.  <form> tag berfungsi untuk membuat sebuah form dari input pengguna
+2. `<title>`. Tag tersebut berguna untuk menampilkan judul halaman website pada tab browser
+3. `<a>`. Tag tersebut adalah tag anchor, yang berfungsi sebagai hyperlink untuk mengarahkan pengguna ke tempat lain seperti URL di luar website
+4. `<h1>`, `<h2>`, `<h3>`, dst merupakan heading tags. Tag tersebut berfungsi untuk menampilkan heading dengan berbagai ukuran
+5. `<br>` tag berfungsi untuk membuat line break
+6. `<html>` tag berfungsi untuk membuat sebuah HTML document
+7. `<div>` tag berfungsi untuk mengelompokkan elemen atau tag menjadi suatu grup berisi blok konten. Tag ini juga berfungsi mendefinisikan class dan ID pada CSS sehingga blok konten ini nantinya dapat distyling menggunakan external CSS
+8.  `<form>` tag berfungsi untuk membuat sebuah form dari input pengguna
+9. `<td>` tag is used to designate a cell (table data) within a table containing data
 
 ### 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui
-CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, kelas, attribute, dll.
+CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, class, attribute, dll.
 
 Contoh CSS selector:
-1. Element Selector
+1. Universal Selector berfungsi untuk memilih seluruh elemen pada scope tertentu. Contoh:
+```css
+*{
+    padding: 0;
+    margin: 0;
+}
+```
+Snippet code tersebut berfungsi untuk mereset padding dan margin bawaan browser, sehingga seluruh elemen HTML menjadi tidak memiliki padding dan margin.
 
-2. Class Selector
+2. Class Selector berfungsi untuk memilih elemen berdasarkan nama class dari elemen tersebut. Sebuah elemen HTML bisa memiliki satu atau lebih class. Selector ini ditandai dengan tanda titik di depannya. Contoh:
+```css
+.text-white {
+    color: white;
+}
+```
+Lalu di dalam file HTML dibuat elemen yang memiliki class text-white, contohnya:
+```html
+<html>
+    ...
+    <div class="text-white">
+        <p>My first name is Ramya.</p>
+    </div>
 
-3. Id Selector
+    <h2>Contoh text</h2>
+    ...
+</html>
+```
+Hasilnya adalah elemen `<p>` di dalam class elemen `<div>` yang terdapat class text-white akan berubah menjadi warna putih, sedangkan `<h2>` tidak akan berubah warna
 
-4. Type Selector, berfungsi untuk me
+3. Id Selector berfungsi untuk memilih elemen HTML berdasarkan nama ID. Selector ini mirip dengan selector class, tetapi hanya bisa diterapkan pada  satu elemen saja. Selector ini ditandai dengan tanda '#' di depannya
+Contoh:
+```css
+#name {
+  background-color: yellow;
+}
+```
+Lalu di dalam file HTMl dibuat elemen yang memiliki ID name, contohnya sebagai berikut:
+```html
+<html>
+    ...
+    <div>
+        <p id="name">My first name is Ramya.</p>
+    </div>
+    ...
+</html>
+```
+Maka, hasilnya adalah elemen `<p>` memiliki background kuning 
+
+4. Type atau Tag Selector, berfungsi untuk memilih atau memberi penanda pada elemen berdasarkan nama tag. Contohnya adalah:
+```css
+
+
+```
+Lalu di dalam file HTMl dibuat elemen
+5. Pseudo Selector, berfungsi untuk mengatur state pada sebuah elemen. Misalnya adalah ketika suatu card dihover, akan muncul efek sedikit ter-zoom pada card tersebut. Contoh pseudo-class selector:
+
+
+
 
 ## Implementasi Kode
 ### 1. Kustomisasi templat untuk halaman `login`, `register`, `create_task`
@@ -193,5 +245,5 @@ Agar navbar dapat muncul pada halaman login,
 
 ### 2. Kustomisasi templat halaman `todolist` dengan card
 
-### 3. Membuat page maenjadi responsive
+### 3. Membuat page menjadi responsive
 Webpage Todolist ini memanfaatkan framework Bootstrap agar tampilan menjadi responsive. 
