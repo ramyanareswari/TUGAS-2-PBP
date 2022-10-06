@@ -153,7 +153,6 @@ a. Page website yang dibuat tidak akan ter-render dengan baik sebelum file CSS e
 6. `<html>` tag berfungsi untuk membuat sebuah HTML document
 7. `<div>` tag berfungsi untuk mengelompokkan elemen atau tag menjadi suatu grup berisi blok konten. Tag ini juga berfungsi mendefinisikan class dan ID pada CSS sehingga blok konten ini nantinya dapat distyling menggunakan external CSS
 8.  `<form>` tag berfungsi untuk membuat sebuah form dari input pengguna
-9. `<td>` tag is used to designate a cell (table data) within a table containing data
 
 ### 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui
 CSS Selector digunakan untuk memilih elemen HTML yang akan diberikan style, berdasarkan elemen tags, id, class, attribute, dll.
@@ -265,3 +264,4 @@ Webpage Todolist ini memanfaatkan framework Bootstrap agar tampilan menjadi resp
 
 ### Referensi
 https://www.w3schools.com/cssref/css_selectors.asp
+
