@@ -54,7 +54,6 @@
             data: {
                 "title": $('#title').val(),
                 "description": $('#description').val(),
-                "csrfmiddlewaretoken": "{{ #csrf_token }}"
             },
             success: (data) => {
                 $("#taskData").html("");
