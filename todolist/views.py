@@ -1,5 +1,5 @@
 from urllib import response
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, HttpResponseForbidden
 from django.urls import reverse
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
@@ -8,6 +8,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from todolist.forms import CreateNew
 from todolist.models import Task
+from django.core import serializers
+
+# ============================/ASSIGNMENT 4/============================
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -42,6 +45,51 @@ def create_task(request):
 
     context = {'task_form' : task_form}
     return render(request, 'create_task.html', context)
+
+# ============================/ASSIGNMENT 6/============================
+
+@login_required(login_url='/todolist/login/')
+def show_todolist_new(request):
+    task_list = Task.objects.all()
+    task_data=[]
+    user = request.user
+
+    for task in task_list:
+        if task.user == user:
+            task_data.append(task)
+    context = {
+        'task_data':task_data,
+        'name' : request.user,
+    }
+    return render(request, 'todolist_new.html', context)
+
+#  A view which returns a JSON object from json database
+def get_task_json(request):
+    task_item = Task.objects.all()
+    return HttpResponse(serializers.serialize('json', task_item), content_type="application/json")
+
+# A view to add task
+@login_required(login_url='/auth/login/')
+def add(request):
+    form = CreateNew(request.POST)
+    if (form.is_valid() and request.method == 'POST'):
+        user = request.user
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        task = Task(user=user, title=title, description=description)
+
+        # Save submitted form data to model
+        task.save()
+
+        return JsonResponse({"fields": {
+            "is_finished": task.is_finished,
+            "title": title,
+            "description": description,
+            "date": task.date,
+        }})        
+
+
+# =================================/AUTH/=======================================
 
 def register(request):
     form = UserCreationForm()

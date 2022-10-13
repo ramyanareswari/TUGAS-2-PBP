@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<head>
+    {% load static %}
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    
+    $(document).ready(function () {
+    getData();
+     })
+    // Return task data as json
+    function getData() {
+        $.ajax({
+            url: "{% url 'todolist:get_task_json' %}",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                
+                    $('#taskData').append(`   
+                    <div class="container shadow p-3 mb-5">
+                    <div class="h2"> ToDos </div>
+                    <div class="d-flex align-content-center justify-content-center">
+
+                    <div class="card bg-body rounded"">
+                        <div class="card-body">
+                            <h2> class="card-title">${data.fields.title}</h2>
+                            <p class="card-text">${data.fields.description}</p>
+                        </div>
+                    </div>
+                    `
+                    );
+                    
+                }
+            }
+        )
+    }
+
+    // POST FROM USER SUBMISSION
+
+    $('#form').on('submit', (e) => {
+        e.preventDefault(); //stop normal form submit
+        $.ajax({
+            type: "POST",
+            url: "/todolist/add/",
+            data: {
+                "title": $('#title').val(),
+                "description": $('#description').val(),
+                "csrfmiddlewaretoken": "{{ #csrf_token }}"
+            },
+            success: (data) => {
+                $("#taskData").html("");
+                $('#taskModal').modal('hide');
+                getData()
+            },
+        })
+    })
+    
+
+    </script>
+
+    
+</head>
+
+<body>
+    <!-- UNTUK MODAL ADD TASK -->
+    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="taskModalLabel">Add New Task</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Form for modal -->
+                <form action="/todolist/add/" method="POST" id="form">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <!-- Modal title input -->
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+    
+                        <!-- Modal desc input -->
+                            <textarea class="form-control" id="description" name="description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-outline-success">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div class="container">
+        <div id="taskData">
+    </div>
+    <div class="container d-flex justify-content-center bg-body rounded">
+        <button type="button" class="btn-lg btn-warning" data-bs-toggle="modal" data-bs-target="#taskModal">Add Task</button>
+    </div>
+</body>
+  {% endblock content %}
